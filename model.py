@@ -10,7 +10,7 @@ x = df.drop('Class', axis=1)
 
 
 model = se()
-model.add(Dense(units=14, input_shape=(13,), activation='relu', kernel_initializer='he_normal' 
+model.add(Dense(units=14, input_shape=(13,), activation='relu', kernel_initializer='he_normal' ))
 model.add(Dense(units=10, activation='relu', kernel_initializer='he_normal' )) 
 model.add(Dense(units=3, activation='softmax' )) 
 model.compile(optimizer=RMSprop(learning_rate=0.01), loss='categorical_crossentropy', metrics=['accuracy'])
