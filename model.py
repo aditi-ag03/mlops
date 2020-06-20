@@ -17,4 +17,9 @@ model.compile(optimizer=RMSprop(learning_rate=0.01), loss='categorical_crossentr
 
 history = model.fit(x, y_category, epochs=50)
 result = history.history['accuracy'][-1]*100
+                
+with open('accuracy.txt','w') as f:
+        print(result,file=f)
+                
 print("Accuracy of the model is : ", result)
+                
